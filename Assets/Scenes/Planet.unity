@@ -1407,6 +1407,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1379127529}
+        m_TargetAssemblyTypeName: Civilization, Assembly-CSharp
+        m_MethodName: Build
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 6
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &520552837
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1836,6 +1848,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1379127529}
+        m_TargetAssemblyTypeName: Civilization, Assembly-CSharp
+        m_MethodName: Build
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &694396920
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2005,6 +2029,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1379127529}
+        m_TargetAssemblyTypeName: Civilization, Assembly-CSharp
+        m_MethodName: Build
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2180,16 +2216,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '<voffset=0.5em><size=200%><sprite=0></size></voffset> <b>250 000</b>
-
-    <voffset=0.5em><size=200%><sprite=1></size></voffset>
-    <b>250 000</b>
-
-    <voffset=0.5em><size=200%><sprite=2></size></voffset> <b>250
-    000</b>
-
-
-    <voffset=0.5em><size=200%><sprite=3></size></voffset> <b>100%</b>'
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2549,6 +2576,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1379127529}
+        m_TargetAssemblyTypeName: Civilization, Assembly-CSharp
+        m_MethodName: Build
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3691,7 +3730,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8041cdb84932a1d49be5988127e92b61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cycleDuration: 1000
+  cycleDuration: 100
 --- !u!1 &1380834599
 GameObject:
   m_ObjectHideFlags: 0
@@ -4692,6 +4731,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1379127529}
+        m_TargetAssemblyTypeName: Civilization, Assembly-CSharp
+        m_MethodName: Build
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1678844729
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5208,6 +5259,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1379127529}
+        m_TargetAssemblyTypeName: Civilization, Assembly-CSharp
+        m_MethodName: Build
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 7
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1939745486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5546,6 +5609,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1379127529}
+        m_TargetAssemblyTypeName: Civilization, Assembly-CSharp
+        m_MethodName: Build
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1993501970
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5781,6 +5856,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1379127529}
+        m_TargetAssemblyTypeName: Civilization, Assembly-CSharp
+        m_MethodName: Build
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 8
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2022441586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5950,6 +6037,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1379127529}
+        m_TargetAssemblyTypeName: Civilization, Assembly-CSharp
+        m_MethodName: Build
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
