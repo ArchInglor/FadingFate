@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2038967892387936935}
   - component: {fileID: 168497720695225228}
   - component: {fileID: -8578623837842956929}
+  - component: {fileID: -3671446362965273095}
   m_Layer: 0
   m_Name: Earth
   m_TagString: Untagged
@@ -100,6 +101,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _color: 3
+  _hueOffset: 0
+  _brightness: 0
 --- !u!114 &3466047307241914292
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -344,5 +347,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28e886acc90c5de4d916cafa23f14477, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sitizenTemplate: {fileID: 3716429770782481028, guid: bb22ffc5996f3b643ab98b40759a7a09, type: 3}
+  _sitizenTemplate: {fileID: -6005642374079878013, guid: f50a31bcd8f6ce247a6f5a8e261c0fe4, type: 3}
   _maxSitizensCount: 1000
+--- !u!114 &-3671446362965273095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4111557454295697652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c010a6ce89905ee4c8bd1de85083eab8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 1
+  _bound: 8.5

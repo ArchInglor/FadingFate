@@ -33,11 +33,8 @@ public class PalettesSystem : MonoBehaviour
             Destroy(gameObject);
         }
         DontDestroyOnLoad(gameObject);
-        // И запускаем собственно инициализатор
     }
-        }
 
-    // ����� ������������� ���������
     private void InitializeManager()
     {
         ColorSetter[] components = GameObject.FindObjectsOfType<ColorSetter>();
