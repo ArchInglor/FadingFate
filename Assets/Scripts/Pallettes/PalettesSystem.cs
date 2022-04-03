@@ -22,28 +22,21 @@ public class PalettesSystem : MonoBehaviour
     }
     public List<Palette> Palettes { get => _palettes; set => _palettes = value; }
 
-
-    // Метод, выполняемый при старте игры
-    void Awake () 
+    private void Awake () 
     {
-        // Теперь, проверяем существование экземпляра
         if (instance == null) 
         { 
-            // Экземпляр менеджера был найден
-            instance = this; // Задаем ссылку на экземпляр объекта
+            instance = this;
         }
         else if(instance == this)
         { 
-            // Экземпляр объекта уже существует на сцене
-            Destroy(gameObject); // Удаляем объект
+            Destroy(gameObject);
         }
         DontDestroyOnLoad(gameObject);
 
-        // И запускаем собственно инициализатор
         InitializeManager();
         }
 
-    // Метод инициализации менеджера
     private void InitializeManager()
     {
         ColorSetter[] components = GameObject.FindObjectsOfType<ColorSetter>();
@@ -62,11 +55,5 @@ public class PalettesSystem : MonoBehaviour
         else if (color == PaletteColor.colorWater) return _palettes[_currentPalette].colorWater;
         else if (color == PaletteColor.colorSpace) return _palettes[_currentPalette].colorSpace;
         return Color.magenta;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
