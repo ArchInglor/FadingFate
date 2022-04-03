@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -33,10 +33,11 @@ public class PalettesSystem : MonoBehaviour
             Destroy(gameObject);
         }
         DontDestroyOnLoad(gameObject);
-
-        InitializeManager();
+        // И запускаем собственно инициализатор
+    }
         }
 
+    // ����� ������������� ���������
     private void InitializeManager()
     {
         ColorSetter[] components = GameObject.FindObjectsOfType<ColorSetter>();
