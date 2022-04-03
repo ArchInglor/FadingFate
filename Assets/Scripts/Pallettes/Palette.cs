@@ -5,9 +5,9 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "CoughTeam/Palette")]
 public class Palette : ScriptableObject
 {
-    public Color colorCulture;
     public Color colorEconomy;
     public Color colorReligion;
+    public Color colorCulture;
     public Color colorEarth;
     public Color colorWater;
     public Color colorSpace;
@@ -16,9 +16,9 @@ public class Palette : ScriptableObject
 
 public enum PaletteColor
 {
-    colorCulture,
     colorEconomy,
     colorReligion,
+    colorCulture,
     colorEarth,
     colorWater,
     colorSpace
