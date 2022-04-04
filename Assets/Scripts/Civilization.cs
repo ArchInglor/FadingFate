@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Events;
 
 public class Civilization : MonoBehaviour
 {
@@ -55,6 +56,8 @@ public class Civilization : MonoBehaviour
 
     #region game cycle
     private bool cycling = false;
+    public event UnityAction CycleUpdated;
+    public event UnityAction<Population> PopulationChanged;
     [SerializeField] private float cycleDuration = 1000f;
     private float cycleTime = 0f;
     private int cycleCounter = 0;
@@ -177,13 +180,13 @@ public class Civilization : MonoBehaviour
          ColorUtility.ToHtmlStringRGB(PalettesSystem.instance.GetColor(PaletteColor.colorEconomy)) + ">" + population.e +
          "</color></b>" + "    <voffset=0.5em><size=200%><sprite=0></size></voffset><br>";
         popText.text += poprGrowth + "  <b><color=#" +
-         ColorUtility.ToHtmlStringRGB(PalettesSystem.instance.GetColor(PaletteColor.colorEconomy)) + ">" + population.r +
+         ColorUtility.ToHtmlStringRGB(PalettesSystem.instance.GetColor(PaletteColor.colorReligion)) + ">" + population.r +
          "</color></b>" + "    <voffset=0.5em><size=200%><sprite=1></size></voffset><br>";
         popText.text += popcGrowth + "  <b><color=#" +
-         ColorUtility.ToHtmlStringRGB(PalettesSystem.instance.GetColor(PaletteColor.colorEconomy)) + ">" + population.c +
+         ColorUtility.ToHtmlStringRGB(PalettesSystem.instance.GetColor(PaletteColor.colorCulture)) + ">" + population.c +
          "</color></b>" + "    <voffset=0.5em><size=200%><sprite=2></size></voffset><br><br>";
          popText.text += popcGrowth + "  <b><color=#" +
-         ColorUtility.ToHtmlStringRGB(PalettesSystem.instance.GetColor(PaletteColor.colorEconomy)) + ">" + ((float)Mathf.Round(cycleGrowth * 100f) / 100f) +
+         ColorUtility.ToHtmlStringRGB(PalettesSystem.instance.GetColor(PaletteColor.colorEarth)) + ">" + ((float)Mathf.Round(cycleGrowth * 100f) / 100f) +
          "</color></b>" + "    <voffset=0.5em><size=200%><sprite=4></size></voffset><br>";
         
         debugText.text = "";
@@ -225,6 +228,10 @@ public class Civilization : MonoBehaviour
         {
             civilizationPoints.c = 0;
             CivilizationsDeath("CrisisCulture");
+        }
+        if (population.e == 1 || population.r == 1 || population.c == 1) 
+        {
+            CivilizationsDeath("Extinction");
         }
 
         TextUpdate();
@@ -478,6 +485,7 @@ public class Civilization : MonoBehaviour
         foreach (GrowthBuff gb in growthBuffs) cycleGrowth *= gb.buff;
         civilizationPoints -= population*civConsumption;
         population *= cycleGrowth;
+        PopulationChanged?.Invoke(population);
     }
     #endregion
 
@@ -550,6 +558,7 @@ public class Civilization : MonoBehaviour
                 Event("People are happy living in anarcho primitivism. Civilization died tho.");
                 break;
             case "Extinction":
+                Event("Extinction. Civilization died.");
                 break;
             case "NuclearWar":
                 endAnim = Instantiate(nuclearWarPrefab, this.transform);

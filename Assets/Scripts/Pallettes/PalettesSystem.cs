@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -33,8 +33,8 @@ public class PalettesSystem : MonoBehaviour
             Destroy(gameObject);
         }
         DontDestroyOnLoad(gameObject);
-        InitializeManager();
     }
+
     private void InitializeManager()
     {
         UpdateSetters();
