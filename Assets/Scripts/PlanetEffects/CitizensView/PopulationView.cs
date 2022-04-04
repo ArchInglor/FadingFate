@@ -70,7 +70,7 @@ public class PopulationView : MonoBehaviour
         }
         else if (newSitizenViewsCount < oldSitizenViewsCount)
         {
-            DeactivateSitizens(newSitizenViewsCount - oldSitizenViewsCount, type);
+            DeactivateSitizens(oldSitizenViewsCount - newSitizenViewsCount, type);
         }
     }
 }
