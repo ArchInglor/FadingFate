@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -20,5 +21,16 @@ public class EarthGeneration : MonoBehaviour
         }
         _secondSegmentOffset = _segments[0].GetWidth();
         _segments[1].transform.position = transform.position + Vector3.left * _secondSegmentOffset * Mathf.Sign(_speed);
+        var earthMovers = GetComponentsInChildren<EarthMover>();
+        foreach (var earthMover in earthMovers)
+        {
+            earthMover.SetSpeed(_speed);
+            earthMover.EarthSegmentOutOfBounds += OnEarthSegmentOutOfBound;
+        }
+    }
+
+    private void OnEarthSegmentOutOfBound()
+    {
+
     }
 }

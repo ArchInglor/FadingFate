@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.Events;
 
 public class Civilization : MonoBehaviour
 {
@@ -24,6 +25,8 @@ public class Civilization : MonoBehaviour
     #endregion
 
     #region game cycle
+    public event UnityAction CycleUpdated;
+    public event UnityAction<Population> PopulationChanged;
     [SerializeField] private float cycleDuration = 1000f;
     private float cycleTime = 0f;
     private int cycleCounter = 0;
@@ -45,7 +48,7 @@ public class Civilization : MonoBehaviour
         cycleTime++;
         if (cycleTime >= cycleDuration)
         {
-            Cycle();
+            UpdateCycle();
             cycleCounter++;
             cycleTime = 0f;            
         }
@@ -65,7 +68,7 @@ public class Civilization : MonoBehaviour
     }
 
     #region game cycle
-    private void Cycle() 
+    private void UpdateCycle() 
     {
         CivPoints cycleIncome = new CivPoints(0, 0, 0);
         foreach (Building building in buildings) 
@@ -75,7 +78,8 @@ public class Civilization : MonoBehaviour
         civilizationPoints += cycleIncome; 
         Growth(cycleIncome);
         TextUpdate();        
-        Debug.Log("Cycle " + cycleIncome.e + ", " + cycleIncome.r + ", " + cycleIncome.c);        
+        Debug.Log("Cycle " + cycleIncome.e + ", " + cycleIncome.r + ", " + cycleIncome.c);
+        CycleUpdated?.Invoke();
     }
     
     // population growth
@@ -90,6 +94,7 @@ public class Civilization : MonoBehaviour
         //                              //
         //////////////////////////////////
         population *= naturalGrowth;
+        PopulationChanged(population);
     }
     #endregion
 
