@@ -5,14 +5,14 @@ using UnityEngine;
 [RequireComponent(typeof(ColorSetter))]
 public class SitizenView : MonoBehaviour
 {
-    private ColorSetter _colorSetter;
+    private ColorSetter[] _colorSetters;
     private SitizenViewType _type;
 
     public SitizenViewType Type => _type;
 
     private void Awake()
     {
-        _colorSetter = GetComponent<ColorSetter>();
+        _colorSetters = GetComponents<ColorSetter>();
     }
 
     public void UpdateType(SitizenViewType type)
@@ -21,13 +21,25 @@ public class SitizenView : MonoBehaviour
         switch (type)
         {
             case SitizenViewType.Economy:
-                _colorSetter.UpdateColor(PaletteColor.colorEconomy);
+                foreach (var colorSetter in _colorSetters)
+                {
+
+                    colorSetter.UpdateColor(PaletteColor.colorEconomy);
+                }
                 break;
             case SitizenViewType.Religion:
-                _colorSetter.UpdateColor(PaletteColor.colorReligion);
+                foreach (var colorSetter in _colorSetters)
+                {
+
+                    colorSetter.UpdateColor(PaletteColor.colorReligion);
+                }
                 break;
             case SitizenViewType.Culture:
-                _colorSetter.UpdateColor(PaletteColor.colorCulture);
+                foreach (var colorSetter in _colorSetters)
+                {
+
+                    colorSetter.UpdateColor(PaletteColor.colorCulture);
+                }
                 break;
         }
     }
