@@ -118,11 +118,10 @@ public class Civilization : MonoBehaviour
         cycleScroll.size = cycleTime/cycleDuration;
         if (cycleTime >= cycleDuration)
         {
-            UpdateCycle();
+            Cycle();
             cycleCounter++;
             cycleTime = 0f;              
         }
-    }
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -482,6 +481,7 @@ public class Civilization : MonoBehaviour
         foreach (GrowthBuff gb in growthBuffs) cycleGrowth *= gb.buff;
         civilizationPoints -= population*civConsumption;
         population *= cycleGrowth;
+        PopulationChanged?.Invoke(population);
     }
     #endregion
 

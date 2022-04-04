@@ -13,49 +13,49 @@ public class ColorSetter : MonoBehaviour
 
     private Image _image;
     private SpriteRenderer _renderer;
+    private Text _text;
+    private Camera _camera;
 
     private void Awake()
     {
         _image = GetComponent<Image>();
         _renderer = GetComponent<SpriteRenderer>();
+        _text = GetComponent<Text>();
     }
 
     public bool UpdateColor()
     {
         float h, s, v;
-        var clr = PalettesSystem.instance.GetColor(_color);
-        Color.RGBToHSV(clr, out h, out s, out v);
+        var color = PalettesSystem.instance.GetColor(_color);
+        Color.RGBToHSV(color, out h, out s, out v);
         h += _hueOffset;    
         v += _brightness;    
-        clr = Color.HSVToRGB(h, s, v);
+        color = Color.HSVToRGB(h, s, v);
 
         if (_image != null) 
         {
-            _image.color = clr;
+            _image.color = color;
             return true;
         }
         else 
         {
-            var compRend = GetComponent<SpriteRenderer>();
-            if (compRend != null) 
+            if (_renderer != null) 
             {
-                compRend.color = clr;
+                _renderer.color = color;
                 return true;
             }
             else 
-            {   
-                var txt = GetComponent<Text>();
-                if (txt != null) 
+            {
+                if (_text != null) 
                 {
-                    txt.color = clr;
+                    _text.color = color;
                     return true;
                 }
                 else 
                 {
-                    var cam = GetComponent<Camera>();
-                    if (cam != null) 
+                    if (_camera != null) 
                     {
-                        cam.backgroundColor = clr;
+                        _camera.backgroundColor = color;
                         return true;
                     }
                 }
