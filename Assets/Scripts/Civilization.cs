@@ -8,7 +8,7 @@ public class Civilization : MonoBehaviour
 {
     public static Civilization instance = null;
 
-    #region parameters
+    #region parameters 
     private static float civCycleOffset = 5f;
     private static float civGrowthOffset = 0.02f;
     private static int startPointsOffset = 250;
