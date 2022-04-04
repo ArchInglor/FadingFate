@@ -37,11 +37,7 @@ public class PalettesSystem : MonoBehaviour
     }
     private void InitializeManager()
     {
-        ColorSetter[] components = GameObject.FindObjectsOfType<ColorSetter>();
-        foreach (ColorSetter comp in components)
-        {
-            comp.UpdateColor();
-        }
+        UpdateSetters();
     }
 
     public Color GetColor(PaletteColor color) 
@@ -53,5 +49,19 @@ public class PalettesSystem : MonoBehaviour
         else if (color == PaletteColor.colorWater) return _palettes[_currentPalette].colorWater;
         else if (color == PaletteColor.colorSpace) return _palettes[_currentPalette].colorSpace;
         return Color.magenta;
+    }
+
+    public void UpdateSetters()
+    {
+        ColorSetter[] components = GameObject.FindObjectsOfType<ColorSetter>();
+        foreach (ColorSetter comp in components)
+        {
+            comp.UpdateColor();
+        }
+    }
+    public void RandomPalette()
+    {
+        _currentPalette = Mathf.RoundToInt(Random.Range(0, _palettes.Count));
+        UpdateSetters();
     }
 }

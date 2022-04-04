@@ -26,11 +26,32 @@ public class ColorSetter : MonoBehaviour
             compImg.color = clr;
             return true;
         }
-        var compRend = GetComponent<SpriteRenderer>();
-        if (compRend != null) 
+        else 
         {
-            compRend.color = clr;
-            return true;
+            var compRend = GetComponent<SpriteRenderer>();
+            if (compRend != null) 
+            {
+                compRend.color = clr;
+                return true;
+            }
+            else 
+            {   
+                var txt = GetComponent<Text>();
+                if (txt != null) 
+                {
+                    txt.color = clr;
+                    return true;
+                }
+                else 
+                {
+                    var cam = GetComponent<Camera>();
+                    if (cam != null) 
+                    {
+                        cam.backgroundColor = clr;
+                        return true;
+                    }
+                }
+            }
         }
         return false;
 
