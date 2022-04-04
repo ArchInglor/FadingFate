@@ -338,7 +338,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sitizenTemplate: {fileID: -6005642374079878013, guid: f50a31bcd8f6ce247a6f5a8e261c0fe4, type: 3}
   _maxSitizenViewsCount: 5000
-  _sitizensPerView: 10
+  _sitizensPerView: 15
 --- !u!114 &-3671446362965273095
 MonoBehaviour:
   m_ObjectHideFlags: 0

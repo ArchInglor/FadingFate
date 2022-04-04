@@ -12,7 +12,7 @@ public class SitizenView : MonoBehaviour
 
     private void Awake()
     {
-        _colorSetters = GetComponents<ColorSetter>();
+        _colorSetters = GetComponentsInChildren<ColorSetter>();
     }
 
     public void UpdateType(SitizenViewType type)
