@@ -21,6 +21,7 @@ public class ColorSetter : MonoBehaviour
         _image = GetComponent<Image>();
         _renderer = GetComponent<SpriteRenderer>();
         _text = GetComponent<Text>();
+        _camera = GetComponent<Camera>();
     }
 
     public bool UpdateColor()
