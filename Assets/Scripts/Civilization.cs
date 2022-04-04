@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Events;
 
 public class Civilization : MonoBehaviour
 {
@@ -55,6 +56,8 @@ public class Civilization : MonoBehaviour
 
     #region game cycle
     private bool cycling = false;
+    public event UnityAction CycleUpdated;
+    public event UnityAction<Population> PopulationChanged;
     [SerializeField] private float cycleDuration = 1000f;
     private float cycleTime = 0f;
     private int cycleCounter = 0;
@@ -115,10 +118,11 @@ public class Civilization : MonoBehaviour
         cycleScroll.size = cycleTime/cycleDuration;
         if (cycleTime >= cycleDuration)
         {
-            Cycle();
+            UpdateCycle();
             cycleCounter++;
             cycleTime = 0f;              
         }
+    }
 
         if (Input.GetKeyDown(KeyCode.Space))
         {

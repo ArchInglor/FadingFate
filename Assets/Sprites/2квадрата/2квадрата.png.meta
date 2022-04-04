@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 995a8bb4a49dc814c94014498920adbf
+guid: 053c670e636ee5d41be97204bbb2c525
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5074367904308538314
-    second: continents30
+      213: -6497779156565161440
+    second: "2\u043A\u0432\u0430\u0434\u0440\u0430\u0442\u04300"
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -82,13 +82,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: continents30
+      name: "2\u043A\u0432\u0430\u0434\u0440\u0430\u0442\u04300"
       rect:
         serializedVersion: 2
         x: 1
         y: 1
-        width: 384
-        height: 128
+        width: 30
+        height: 30
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -96,8 +96,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 634db04b6493499b0800000000000000
-      internalID: -5074367904308538314
+      spriteID: 02a0ff7a84043d5a0800000000000000
+      internalID: -6497779156565161440
       vertices: []
       indices: 
       edges: []

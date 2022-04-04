@@ -10,7 +10,16 @@ public class ColorSetter : MonoBehaviour
     [SerializeField] private PaletteColor _color;
     [SerializeField] private float _hueOffset;
     [SerializeField] private float _brightness;
-    
+
+    private Image _image;
+    private SpriteRenderer _renderer;
+
+    private void Awake()
+    {
+        _image = GetComponent<Image>();
+        _renderer = GetComponent<SpriteRenderer>();
+    }
+
     public bool UpdateColor()
     {
         float h, s, v;
@@ -20,10 +29,9 @@ public class ColorSetter : MonoBehaviour
         v += _brightness;    
         clr = Color.HSVToRGB(h, s, v);
 
-        var compImg = GetComponent<Image>();
-        if (compImg != null) 
+        if (_image != null) 
         {
-            compImg.color = clr;
+            _image.color = clr;
             return true;
         }
         else 
